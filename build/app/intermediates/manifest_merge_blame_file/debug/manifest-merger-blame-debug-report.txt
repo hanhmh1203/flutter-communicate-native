@@ -1,0 +1,292 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="william.code.flutter_structure_app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:4:5-67
+15-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:4:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:5:5-79
+16-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:5:22-76
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+17-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:6:5-76
+17-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:6:22-73
+18    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+18-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:7:5-75
+18-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:7:22-72
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:8:5-79
+19-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:8:22-76
+20    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+20-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:9:5-81
+20-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:9:22-78
+21    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+21-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:10:5-85
+21-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:10:22-82
+22    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+22-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:11:5-77
+22-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:11:22-74
+23
+24    <uses-feature android:name="android.hardware.camera.any" />
+24-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:13:5-64
+24-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:13:19-61
+25
+26    <uses-permission android:name="android.permission.CAMERA" />
+26-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:14:5-65
+26-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:14:22-62
+27    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+27-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:15:5-71
+27-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:15:22-68
+28
+29    <queries>
+29-->[androidx.camera:camera-extensions:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/97e30c121bbcee2a5c4eb080addaa225/transformed/jetified-camera-extensions-1.3.0-alpha04/AndroidManifest.xml:22:5-26:15
+30        <intent>
+30-->[androidx.camera:camera-extensions:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/97e30c121bbcee2a5c4eb080addaa225/transformed/jetified-camera-extensions-1.3.0-alpha04/AndroidManifest.xml:23:9-25:18
+31            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION" />
+31-->[androidx.camera:camera-extensions:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/97e30c121bbcee2a5c4eb080addaa225/transformed/jetified-camera-extensions-1.3.0-alpha04/AndroidManifest.xml:24:13-86
+31-->[androidx.camera:camera-extensions:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/97e30c121bbcee2a5c4eb080addaa225/transformed/jetified-camera-extensions-1.3.0-alpha04/AndroidManifest.xml:24:21-83
+32        </intent>
+33    </queries>
+34
+35    <permission
+35-->[androidx.core:core:1.9.0] /Users/william/.gradle/caches/transforms-3/eb8e6eb615075ee09f5de13b93fbd564/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+36        android:name="william.code.flutter_structure_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+36-->[androidx.core:core:1.9.0] /Users/william/.gradle/caches/transforms-3/eb8e6eb615075ee09f5de13b93fbd564/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+37        android:protectionLevel="signature" />
+37-->[androidx.core:core:1.9.0] /Users/william/.gradle/caches/transforms-3/eb8e6eb615075ee09f5de13b93fbd564/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+38
+39    <uses-permission android:name="william.code.flutter_structure_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+39-->[androidx.core:core:1.9.0] /Users/william/.gradle/caches/transforms-3/eb8e6eb615075ee09f5de13b93fbd564/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.9.0] /Users/william/.gradle/caches/transforms-3/eb8e6eb615075ee09f5de13b93fbd564/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+40
+41    <application
+41-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:17:5-53:19
+42        android:name="william.code.flutter_structure_app.MyApplication"
+42-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:18:9-38
+43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+43-->[androidx.core:core:1.9.0] /Users/william/.gradle/caches/transforms-3/eb8e6eb615075ee09f5de13b93fbd564/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+44        android:debuggable="true"
+45        android:extractNativeLibs="false"
+46        android:icon="@mipmap/ic_launcher"
+46-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:19:9-43
+47        android:label="flutter_structure_app"
+47-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:20:9-46
+48        android:theme="@style/Theme.AppCompat.Light" >
+48-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:21:9-53
+49        <activity
+49-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:22:9-41:20
+50            android:name="william.code.flutter_structure_app.MainActivity"
+50-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:23:13-41
+51            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+51-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:24:13-163
+52            android:exported="true"
+52-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:25:13-36
+53            android:hardwareAccelerated="true"
+53-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:26:13-47
+54            android:launchMode="singleTop"
+54-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:27:13-43
+55            android:theme="@style/AppTheme.FullScreen"
+55-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:28:13-55
+56            android:windowSoftInputMode="adjustResize" >
+56-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:29:13-55
+57
+58            <!--
+59                 Specifies an Android theme to apply to this Activity as soon as
+60                 the Android process has started. This theme is visible to the user
+61                 while the Flutter UI initializes. After that, this theme continues
+62                 to determine the Window background behind the Flutter UI.
+63            -->
+64            <meta-data
+64-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:34:13-36:57
+65                android:name="io.flutter.embedding.android.NormalTheme"
+65-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:35:17-72
+66                android:resource="@style/NormalTheme" />
+66-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:36:17-54
+67
+68            <intent-filter>
+68-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:37:13-40:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:38:17-69
+69-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:38:25-66
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:39:17-77
+71-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:39:27-74
+72            </intent-filter>
+73        </activity>
+74        <activity
+74-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:42:9-46:20
+75            android:name="william.code.flutter_structure_app.scan.ScanActivity"
+75-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:43:13-46
+76            android:theme="@style/AppTheme.FullScreen" >
+76-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:44:13-55
+77        </activity>
+78
+79        <service android:name="william.code.flutter_structure_app.service.LocationService" />
+79-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:47:9-59
+79-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:47:18-57
+80        <!--
+81             Don't delete the meta-data below.
+82             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+83        -->
+84        <meta-data
+84-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:50:9-52:33
+85            android:name="flutterEmbedding"
+85-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:51:13-44
+86            android:value="2" />
+86-->/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/AndroidManifest.xml:52:13-30
+87
+88        <uses-library
+88-->[androidx.camera:camera-extensions:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/97e30c121bbcee2a5c4eb080addaa225/transformed/jetified-camera-extensions-1.3.0-alpha04/AndroidManifest.xml:29:9-31:40
+89            android:name="androidx.camera.extensions.impl"
+89-->[androidx.camera:camera-extensions:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/97e30c121bbcee2a5c4eb080addaa225/transformed/jetified-camera-extensions-1.3.0-alpha04/AndroidManifest.xml:30:13-59
+90            android:required="false" />
+90-->[androidx.camera:camera-extensions:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/97e30c121bbcee2a5c4eb080addaa225/transformed/jetified-camera-extensions-1.3.0-alpha04/AndroidManifest.xml:31:13-37
+91
+92        <service
+92-->[androidx.camera:camera-camera2:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/8ca16c70f5e1619c0d66b8a5b87cafc9/transformed/jetified-camera-camera2-1.3.0-alpha04/AndroidManifest.xml:24:9-33:19
+93            android:name="androidx.camera.core.impl.MetadataHolderService"
+93-->[androidx.camera:camera-camera2:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/8ca16c70f5e1619c0d66b8a5b87cafc9/transformed/jetified-camera-camera2-1.3.0-alpha04/AndroidManifest.xml:25:13-75
+94            android:enabled="false"
+94-->[androidx.camera:camera-camera2:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/8ca16c70f5e1619c0d66b8a5b87cafc9/transformed/jetified-camera-camera2-1.3.0-alpha04/AndroidManifest.xml:26:13-36
+95            android:exported="false" >
+95-->[androidx.camera:camera-camera2:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/8ca16c70f5e1619c0d66b8a5b87cafc9/transformed/jetified-camera-camera2-1.3.0-alpha04/AndroidManifest.xml:27:13-37
+96            <meta-data
+96-->[androidx.camera:camera-camera2:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/8ca16c70f5e1619c0d66b8a5b87cafc9/transformed/jetified-camera-camera2-1.3.0-alpha04/AndroidManifest.xml:30:13-32:89
+97                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+97-->[androidx.camera:camera-camera2:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/8ca16c70f5e1619c0d66b8a5b87cafc9/transformed/jetified-camera-camera2-1.3.0-alpha04/AndroidManifest.xml:31:17-103
+98                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+98-->[androidx.camera:camera-camera2:1.3.0-alpha04] /Users/william/.gradle/caches/transforms-3/8ca16c70f5e1619c0d66b8a5b87cafc9/transformed/jetified-camera-camera2-1.3.0-alpha04/AndroidManifest.xml:32:17-86
+99        </service>
+100        <service
+100-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0] /Users/william/.gradle/caches/transforms-3/3474febfd7f26ea69c9f9fffa3347977/transformed/jetified-play-services-mlkit-barcode-scanning-18.1.0/AndroidManifest.xml:9:9-15:19
+101            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+101-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0] /Users/william/.gradle/caches/transforms-3/3474febfd7f26ea69c9f9fffa3347977/transformed/jetified-play-services-mlkit-barcode-scanning-18.1.0/AndroidManifest.xml:10:13-91
+102            android:directBootAware="true"
+102-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:17:13-43
+103            android:exported="false" >
+103-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0] /Users/william/.gradle/caches/transforms-3/3474febfd7f26ea69c9f9fffa3347977/transformed/jetified-play-services-mlkit-barcode-scanning-18.1.0/AndroidManifest.xml:11:13-37
+104            <meta-data
+104-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0] /Users/william/.gradle/caches/transforms-3/3474febfd7f26ea69c9f9fffa3347977/transformed/jetified-play-services-mlkit-barcode-scanning-18.1.0/AndroidManifest.xml:12:13-14:85
+105                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+105-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0] /Users/william/.gradle/caches/transforms-3/3474febfd7f26ea69c9f9fffa3347977/transformed/jetified-play-services-mlkit-barcode-scanning-18.1.0/AndroidManifest.xml:13:17-120
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0] /Users/william/.gradle/caches/transforms-3/3474febfd7f26ea69c9f9fffa3347977/transformed/jetified-play-services-mlkit-barcode-scanning-18.1.0/AndroidManifest.xml:14:17-82
+107            <meta-data
+107-->[com.google.mlkit:vision-common:17.3.0] /Users/william/.gradle/caches/transforms-3/2b1f38ea936ca3b0bf268afd4619eb1e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+108                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+108-->[com.google.mlkit:vision-common:17.3.0] /Users/william/.gradle/caches/transforms-3/2b1f38ea936ca3b0bf268afd4619eb1e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:13:17-124
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[com.google.mlkit:vision-common:17.3.0] /Users/william/.gradle/caches/transforms-3/2b1f38ea936ca3b0bf268afd4619eb1e/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:14:17-82
+110            <meta-data
+110-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:20:13-22:85
+111                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+111-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:21:17-120
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:22:17-82
+113        </service>
+114
+115        <provider
+115-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:9:9-13:38
+116            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+116-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:10:13-78
+117            android:authorities="william.code.flutter_structure_app.mlkitinitprovider"
+117-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:11:13-69
+118            android:exported="false"
+118-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:12:13-37
+119            android:initOrder="99" />
+119-->[com.google.mlkit:common:18.6.0] /Users/william/.gradle/caches/transforms-3/77d07391428f1054cdc06780fa139019/transformed/jetified-common-18.6.0/AndroidManifest.xml:13:13-35
+120
+121        <activity
+121-->[com.google.android.gms:play-services-base:18.1.0] /Users/william/.gradle/caches/transforms-3/933d2a3ca6f6f8fb0081d0d25ccd4451/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+122            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+122-->[com.google.android.gms:play-services-base:18.1.0] /Users/william/.gradle/caches/transforms-3/933d2a3ca6f6f8fb0081d0d25ccd4451/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+123            android:exported="false"
+123-->[com.google.android.gms:play-services-base:18.1.0] /Users/william/.gradle/caches/transforms-3/933d2a3ca6f6f8fb0081d0d25ccd4451/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+124            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+124-->[com.google.android.gms:play-services-base:18.1.0] /Users/william/.gradle/caches/transforms-3/933d2a3ca6f6f8fb0081d0d25ccd4451/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+125
+126        <meta-data
+126-->[com.google.android.gms:play-services-basement:18.1.0] /Users/william/.gradle/caches/transforms-3/035558bba1406c1868b07fd22ad75197/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+127            android:name="com.google.android.gms.version"
+127-->[com.google.android.gms:play-services-basement:18.1.0] /Users/william/.gradle/caches/transforms-3/035558bba1406c1868b07fd22ad75197/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+128            android:value="@integer/google_play_services_version" />
+128-->[com.google.android.gms:play-services-basement:18.1.0] /Users/william/.gradle/caches/transforms-3/035558bba1406c1868b07fd22ad75197/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+129
+130        <uses-library
+130-->[androidx.window:window:1.0.0-beta04] /Users/william/.gradle/caches/transforms-3/885d269311ad07f56489535c6c9c6f59/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+131            android:name="androidx.window.extensions"
+131-->[androidx.window:window:1.0.0-beta04] /Users/william/.gradle/caches/transforms-3/885d269311ad07f56489535c6c9c6f59/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+132            android:required="false" />
+132-->[androidx.window:window:1.0.0-beta04] /Users/william/.gradle/caches/transforms-3/885d269311ad07f56489535c6c9c6f59/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+133        <uses-library
+133-->[androidx.window:window:1.0.0-beta04] /Users/william/.gradle/caches/transforms-3/885d269311ad07f56489535c6c9c6f59/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+134            android:name="androidx.window.sidecar"
+134-->[androidx.window:window:1.0.0-beta04] /Users/william/.gradle/caches/transforms-3/885d269311ad07f56489535c6c9c6f59/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+135            android:required="false" />
+135-->[androidx.window:window:1.0.0-beta04] /Users/william/.gradle/caches/transforms-3/885d269311ad07f56489535c6c9c6f59/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+136
+137        <provider
+137-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/49bf3d54c3d2b8904fd7854a47eb9c84/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+138            android:name="androidx.startup.InitializationProvider"
+138-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/49bf3d54c3d2b8904fd7854a47eb9c84/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+139            android:authorities="william.code.flutter_structure_app.androidx-startup"
+139-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/49bf3d54c3d2b8904fd7854a47eb9c84/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+140            android:exported="false" >
+140-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/49bf3d54c3d2b8904fd7854a47eb9c84/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+141            <meta-data
+141-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/49bf3d54c3d2b8904fd7854a47eb9c84/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+142                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+142-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/49bf3d54c3d2b8904fd7854a47eb9c84/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+143                android:value="androidx.startup" />
+143-->[androidx.emoji2:emoji2:1.2.0] /Users/william/.gradle/caches/transforms-3/49bf3d54c3d2b8904fd7854a47eb9c84/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+144            <meta-data
+144-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/d50edae3639ebd8d0983409b573f63e5/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+145                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+145-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/d50edae3639ebd8d0983409b573f63e5/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+146                android:value="androidx.startup" />
+146-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/william/.gradle/caches/transforms-3/d50edae3639ebd8d0983409b573f63e5/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+147        </provider>
+148
+149        <service
+149-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/william/.gradle/caches/transforms-3/df7a4feeab98ba578041c7450c63655c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+150            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+150-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/william/.gradle/caches/transforms-3/df7a4feeab98ba578041c7450c63655c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+151            android:exported="false" >
+151-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/william/.gradle/caches/transforms-3/df7a4feeab98ba578041c7450c63655c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+152            <meta-data
+152-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/william/.gradle/caches/transforms-3/df7a4feeab98ba578041c7450c63655c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+153                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+153-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/william/.gradle/caches/transforms-3/df7a4feeab98ba578041c7450c63655c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+154                android:value="cct" />
+154-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/william/.gradle/caches/transforms-3/df7a4feeab98ba578041c7450c63655c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+155        </service>
+156        <service
+156-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/william/.gradle/caches/transforms-3/2be83f6784cf3c93794f3c7eb468d52f/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+157            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+157-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/william/.gradle/caches/transforms-3/2be83f6784cf3c93794f3c7eb468d52f/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+158            android:exported="false"
+158-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/william/.gradle/caches/transforms-3/2be83f6784cf3c93794f3c7eb468d52f/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+159            android:permission="android.permission.BIND_JOB_SERVICE" >
+159-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/william/.gradle/caches/transforms-3/2be83f6784cf3c93794f3c7eb468d52f/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+160        </service>
+161
+162        <receiver
+162-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/william/.gradle/caches/transforms-3/2be83f6784cf3c93794f3c7eb468d52f/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+163            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+163-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/william/.gradle/caches/transforms-3/2be83f6784cf3c93794f3c7eb468d52f/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+164            android:exported="false" />
+164-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/william/.gradle/caches/transforms-3/2be83f6784cf3c93794f3c7eb468d52f/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+165    </application>
+166
+167</manifest>

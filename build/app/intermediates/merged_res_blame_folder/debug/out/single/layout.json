@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/build/app/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_scan.xml",
+        "source": "/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/res/layout/activity_scan.xml"
+    },
+    {
+        "merged": "/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/build/app/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_scan_2.xml",
+        "source": "/Users/william/Documents/my_git/flutter_structure_app/Flutter_structure_app/android/app/src/main/res/layout/activity_scan_2.xml"
+    }
+]
