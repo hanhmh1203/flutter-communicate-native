@@ -68,7 +68,7 @@ import CoreMotion
           }
       })
       
-    GeneratedPluginRegistrant.register(with: self)
+      GeneratedPluginRegistrant.register(withRegistry: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
     
