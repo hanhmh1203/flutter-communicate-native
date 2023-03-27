@@ -19,6 +19,7 @@ class ScanController extends BaseController {
     //receive by Method Channel
     environmentActivity.getMethodChannel().setMethodCallHandler((call) {
       if (call.method == EnvironmentActivity.resultMethod) {
+        print("$TAG ${call.arguments}");
         String result = call.arguments[EnvironmentActivity.argumentName];
         resultReading = result;
         update();
