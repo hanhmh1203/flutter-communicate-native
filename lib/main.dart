@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_structure_app/ui/connect_native_get_info/basic/basic_page.dart';
 import 'package:flutter_structure_app/ui/connect_native_get_info/scan_code/scan_screen_page.dart';
 
 import 'package:flutter_structure_app/ui/connect_native_get_info/tracking_location/tracking_location_screen_page.dart';
@@ -9,10 +10,9 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() async {
-  runApp(GetMaterialApp(
+  runApp(const GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    home: const HomeScreen(),
-    builder: EasyLoading.init(),
+    home: HomeScreen(),
   ));
 }
 
@@ -29,10 +29,18 @@ class HomeScreen extends GetView {
         const SizedBox(height: 20),
         ElevatedButton(
           onPressed: () async {
+            BasicScreen.open();
+            // add your logic for button 2 here
+          },
+          child: const Text(' Basic Method'),
+        ),
+        const SizedBox(height: 20),
+        ElevatedButton(
+          onPressed: () async {
             SensorScreen.open();
             // add your logic for button 2 here
           },
-          child: const Text('Sensor Reading'),
+          child: const Text('Sensor Reading (Stream)'),
         ),
         const SizedBox(height: 20),
         ElevatedButton(
@@ -40,7 +48,7 @@ class HomeScreen extends GetView {
             // add your logic for button 3 here
             TrackingLocationScreen.open();
           },
-          child: const Text('Tracking Location'),
+          child: const Text('Tracking Location (Stream)'),
         ),
         const SizedBox(height: 20),
         ElevatedButton(

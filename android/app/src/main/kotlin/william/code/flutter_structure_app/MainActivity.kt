@@ -7,7 +7,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.hardware.Sensor
 import android.hardware.SensorManager
-import android.util.Log
+import android.os.Build
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -22,6 +22,8 @@ import william.code.flutter_structure_app.service.LocationService
 
 class MainActivity : FlutterActivity(), EventChannel.StreamHandler {
     private val REQUEST_CODE_SCAN_ACTIVITY = 1
+    private var basicMethodChannel: MethodChannel? = null;
+
     private var sensorMethodChannel: MethodChannel? = null;
     private lateinit var sensorManager: SensorManager;
     private var pressureChannel: EventChannel? = null
@@ -40,6 +42,18 @@ class MainActivity : FlutterActivity(), EventChannel.StreamHandler {
 
     private fun setupChannel(messenger: BinaryMessenger) {
         sensorManager = context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        basicMethodChannel = MethodChannel(messenger, "basic_page")
+        basicMethodChannel?.let {
+            it.setMethodCallHandler { methodCall: MethodCall, result: MethodChannel.Result ->
+                if(methodCall.method =="getDeviceInfo"){
+                    val argument = methodCall.arguments
+                    val version = Build.VERSION.RELEASE
+                    result.success("$version\n argument: $argument")
+                }else{
+                    result.notImplemented()
+                }
+            }
+        }
         sensorMethodChannel = MethodChannel(messenger, ConstantEnvironmentSensor.methodChannelName)
         sensorMethodChannel?.let {
             it.setMethodCallHandler { methodCall: MethodCall, result: MethodChannel.Result ->
