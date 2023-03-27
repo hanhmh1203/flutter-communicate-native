@@ -4,24 +4,42 @@ import CoreMotion
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
+    
   override func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
       let methodChannelNameScan = "environment_activity_method_channel"
-      let methodChannelName = "environment_sensors/method"
+      let methodChannelNameSensor = "environment_sensors/method"
+      let methodChannelNameBasic = "basic_page"
+      
       let pressureChannelName = "environment_sensors/pressure"
-      let ambientTemperatureChannelName = "environment_sensors/temperature"
-      let humidityChannelName = "environment_sensors/humidity"
-      let lightChannelName = "environment_sensors/light"
 
       let controller: FlutterViewController  = window?.rootViewController as! FlutterViewController
+      
+      let basic = FlutterMethodChannel(name: methodChannelNameBasic, binaryMessenger: controller.binaryMessenger)
+      
+      
+      basic.setMethodCallHandler({
+          (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
+          switch call.method {
+          case "getDeviceInfo":
+              let argument = call.arguments
+              let version = UIDevice.current.systemVersion
+              result("\(version)\n argument: \(argument)")
+    
+          default:
+              result(FlutterMethodNotImplemented)
+          }
+      })
+      
+      
 
-      let methodChannel = FlutterMethodChannel(name: methodChannelName, binaryMessenger: controller.binaryMessenger)
+      let sensor = FlutterMethodChannel(name: methodChannelNameSensor, binaryMessenger: controller.binaryMessenger)
       
       let pressureStream = PressureStreamHandler()
       
-      methodChannel.setMethodCallHandler({
+      sensor.setMethodCallHandler({
           (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
           switch call.method {
           case "isSensorAvailable":
