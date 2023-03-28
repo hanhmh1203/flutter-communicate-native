@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf28671-56bd-4b7a-8b6b-a536add36dd0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Podfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner/ScanViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Runner/ScanViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/scan_code/scan_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/scan_code/scan_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/scan_code/scan_screen_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/scan_code/scan_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

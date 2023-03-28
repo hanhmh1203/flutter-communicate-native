@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_structure_app/ui/connect_native_get_info/basic/basic_page.dart';
-import 'package:flutter_structure_app/ui/connect_native_get_info/scan_code/scan_screen_page.dart';
+import 'package:flutter_structure_app/ui/connect_native_get_info/flatform_view/platform_view_scan_page.dart';
+import 'package:flutter_structure_app/ui/connect_native_get_info/scan_code/scan_page.dart';
 
 import 'package:flutter_structure_app/ui/connect_native_get_info/tracking_location/tracking_location_screen_page.dart';
 import 'package:flutter_structure_app/ui/connect_native_get_info/sensor/sensor_page.dart';
@@ -57,6 +58,15 @@ class HomeScreen extends GetView {
             ScanScreen.open();
           },
           child: const Text('Scan QR Code/ BarCode'),
+        ),
+        const SizedBox(height: 20),
+
+        ElevatedButton(
+          onPressed: () async {
+            // add your logic for button 3 here
+            PlatFormViewScanScreen.open();
+          },
+          child: const Text('Platform View'),
         ),
         const SizedBox(height: 20),
       ],
