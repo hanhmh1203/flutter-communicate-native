@@ -13,6 +13,7 @@ import CoreMotion
         methodChannelScan?.invokeMethod("result_method", arguments: resultData)
       }
     var methodChannelScan : FlutterMethodChannel?
+    
   override func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
