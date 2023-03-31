@@ -1,46 +1,56 @@
 import 'dart:async';
+import 'dart:ffi';
 import 'dart:io';
 
+import 'package:flutter/services.dart';
 import 'package:flutter_structure_app/BaseController.dart';
 import 'package:flutter_structure_app/ui/connect_native_get_info/environment/environment_tracking_location.dart';
+import 'package:get/get.dart';
 import '../environment/environment_activity.dart';
 
 class PlatFormViewScanController extends BaseController {
-  final String TAG = "ScanController";
+  final String TAG = "PlatFormViewScanController";
 
   String resultReading = "";
 
-  final environmentActivity = EnvironmentActivity();
   static const String viewType = 'ScanView';
-  // Pass parameters to the platform side.
+
   static const Map<String, dynamic> creationParams = <String, dynamic>{};
+  MethodChannel channel = const MethodChannel("PlatformView_ScanView");
+  RxBool isCameraReady = false.obs;
   @override
   void onInit() {
     // TODO: implement onInit
     super.onInit();
-    //receive by Method Channel
-    // environmentActivity.getMethodChannel().setMethodCallHandler((call) {
-    //   if (call.method == EnvironmentActivity.resultMethod) {
-    //     print("$TAG ${call.arguments}");
-    //     String result = call.arguments[EnvironmentActivity.argumentName];
-    //     resultReading = result;
-    //     update();
-    //   }
-    //   return Future.value(null);
-    // });
-
+    //listen data send from Native
+    channel.setMethodCallHandler((call) {
+      if (call.method == "data_from_native_to_flutter") {
+        resultReading = call.arguments;
+        isCameraReady.value = false;
+        update();
+      }
+      return Future.value(null);
+    });
   }
 
+  @override
+  void onReady() {
+    // TODO: implement onReady
+    super.onReady();
+    startReading();
+  }
+  //send and method to native with argument: "Hello PlatFormView"
   void startReading() async {
-    print("startReading");
-    await environmentActivity.openNativeView();
+    bool result = await channel.invokeMethod(
+        "data_from_flutter_to_native", "Hello PlatFormView");
+    isCameraReady.value = result;
     update();
   }
 
   @override
   void dispose() {
     // TODO: implement dispose
-    environmentActivity.tearDown();
+    isCameraReady.close();
     super.dispose();
   }
 }

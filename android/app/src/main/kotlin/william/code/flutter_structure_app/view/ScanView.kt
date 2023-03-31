@@ -17,6 +17,10 @@ import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.FlutterEngineCache
+import io.flutter.plugin.common.MethodCall
+import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.platform.PlatformView
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -28,30 +32,34 @@ class ScanView(
     private val cameraView: View,
     id: Int,
     creationParams: Map<String?, Any?>?
-) : PlatformView {
+) : PlatformView, MethodChannel.MethodCallHandler {
+    val tag  = "ScanView"
+    private var methodChannel: MethodChannel? = null
+    private var flutterEngine: FlutterEngine? = null
+    override fun onMethodCall(methodCall: MethodCall, result: MethodChannel.Result) {
+        if (methodCall.method.equals("data_from_flutter_to_native")) {
+            val data: String = methodCall.arguments as String
+            Toast.makeText(context, data, Toast.LENGTH_SHORT).show()
+            startCamera()
+            // Use the data as needed
+            result.success(true)
+        } else {
+            result.notImplemented()
+        }
+    }
+
     private lateinit var camera: Camera
     private lateinit var preview: Preview
     private var imageAnalyzer: ImageAnalysis? = null
     private var cameraExecutor: ExecutorService
     private var scanner: BarcodeScanner
 
-    companion object {
-        private const val TAG = "CameraXApp"
-        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
-        private const val REQUEST_CODE_PERMISSIONS = 10
-        private val REQUIRED_PERMISSIONS =
-            mutableListOf(
-                Manifest.permission.CAMERA,
-                Manifest.permission.RECORD_AUDIO
-            ).apply {
-                if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
-                    add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                }
-            }.toTypedArray()
-    }
-
     init {
-        startCamera()
+        flutterEngine = FlutterEngineCache.getInstance()["my_engine_id"]
+        flutterEngine?.let {
+            methodChannel = MethodChannel(it.dartExecutor.binaryMessenger, "PlatformView_ScanView")
+            methodChannel!!.setMethodCallHandler(this)
+        }
 
         val options = BarcodeScannerOptions.Builder()
             .setBarcodeFormats(
@@ -92,7 +100,7 @@ class ScanView(
                 )
 
             } catch (exc: Exception) {
-                Log.e(TAG, "Use case binding failed", exc)
+                Log.e(tag, "Use case binding failed", exc)
             }
 
         }, ContextCompat.getMainExecutor(context))
@@ -111,21 +119,34 @@ class ScanView(
                         for (barcode in barcodes) {
                             val rawValue = barcode.rawValue
                             val valueType = barcode.valueType
-                            Log.d(TAG, "Barcode detected: $rawValue")
-                            val intent = Intent()
-                            intent.putExtra("my_result", rawValue.toString())
-                            Toast.makeText(context,rawValue.toString(),Toast.LENGTH_SHORT).show()
-//                            setResult(RESULT_OK, intent)
-//                            finish()
+                            Log.d(tag, "Barcode detected: $rawValue")
+
+                            // send value to Flutter code
+                            methodChannel?.invokeMethod(
+                                "data_from_native_to_flutter",
+                                rawValue.toString()
+                            )
+                            val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
+                            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+                            cameraProvider.unbindAll()
                         }
                     }
                     .addOnFailureListener {
-                        Log.e(TAG, "Barcode detection failed: ${it.message}")
+                        Log.e(tag, "Barcode detection failed: ${it.message}")
                     }
                     .addOnCompleteListener {
                         imageProxy.close()
                     }
             }
+        }
+    }
+
+    override fun onFlutterViewDetached() {
+        super.onFlutterViewDetached()
+        if (::camera.isInitialized) {
+            val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+            cameraProvider.unbindAll()
         }
     }
 

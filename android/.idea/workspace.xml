@@ -10,12 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf28671-56bd-4b7a-8b6b-a536add36dd0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/view/ScanView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/view/ScanViewFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/scan/ScanActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/scan/ScanActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_scan_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_scan_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/view/ScanView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/view/ScanView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_page.dart" afterDir="false" />
     </list>
@@ -49,15 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/william/Documents/my_git/flutter-communicate-native/android/app/src/main/res/layout",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/william/Documents/my_git/flutter-communicate-native/android/app/src/main/res/layout&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />

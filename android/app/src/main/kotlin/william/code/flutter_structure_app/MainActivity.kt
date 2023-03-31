@@ -13,6 +13,7 @@ import androidx.camera.view.PreviewView
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
@@ -46,6 +47,7 @@ class MainActivity : FlutterActivity(), EventChannel.StreamHandler {
     }
 
     private fun regisPlatformView(flutterEngine: FlutterEngine) {
+        FlutterEngineCache.getInstance().put("my_engine_id", flutterEngine);
         val cameraView: View = this.layoutInflater.inflate(R.layout.activity_scan_2, null)
         val previewView: PreviewView = cameraView.findViewById(R.id.viewFinder)
         flutterEngine

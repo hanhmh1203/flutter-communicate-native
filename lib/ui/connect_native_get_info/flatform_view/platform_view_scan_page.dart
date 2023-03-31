@@ -30,42 +30,77 @@ class PlatFormViewScanScreen extends StatelessWidget {
             ),
             title: const Text('Scan QR Code/BarCode'),
           ),
-          body: Center(
-            child: SizedBox(
-              width: 300,
-              height: 300,
-              child: PlatformViewLink(
-                viewType: PlatFormViewScanController.viewType,
-                surfaceFactory: (context, controller) {
-                  return AndroidViewSurface(
-                    controller: controller as AndroidViewController,
-                    gestureRecognizers: const <
-                        Factory<OneSequenceGestureRecognizer>>{},
-                    hitTestBehavior: PlatformViewHitTestBehavior.opaque,
-                  );
-                },
-                onCreatePlatformView: (params) {
-                  return PlatformViewsService.initSurfaceAndroidView(
-                    id: params.id,
-                    viewType: PlatFormViewScanController.viewType,
-                    layoutDirection: TextDirection.ltr,
-                    creationParams: PlatFormViewScanController.creationParams,
-                    creationParamsCodec: const StandardMessageCodec(),
-                    onFocus: () {
-                      params.onFocusChanged(true);
+          body: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  SizedBox(
+                  width: 300,
+                  height: 300,
+                  child: Stack(
+                    children: [
+                      PlatformViewLink(
+                        viewType: PlatFormViewScanController.viewType,
+                        surfaceFactory: (context, controller) {
+                          return AndroidViewSurface(
+                            controller: controller as AndroidViewController,
+                            gestureRecognizers: const <
+                                Factory<OneSequenceGestureRecognizer>>{},
+                            hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+                          );
+                        },
+                        onCreatePlatformView: (params) {
+                          return PlatformViewsService.initSurfaceAndroidView(
+                            id: params.id,
+                            viewType: PlatFormViewScanController.viewType,
+                            layoutDirection: TextDirection.ltr,
+                            creationParams:
+                            PlatFormViewScanController.creationParams,
+                            creationParamsCodec: const StandardMessageCodec(),
+                            onFocus: () {
+                              params.onFocusChanged(true);
+                            },
+                          )
+                            ..addOnPlatformViewCreatedListener(
+                                params.onPlatformViewCreated)
+                            ..create();
+                        },
+                      ),
+                      Container(
+                        color: Colors.black, // set your desired background color here
+                        child: const Visibility(
+                          visible: false, // set visibility to false when platform view is attached
+                          child: SizedBox(
+                            width: 300,
+                            height: 300,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+
+            ],
+                ),
+                const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () async {
+                      controller.startReading();
                     },
-                  )
-                    ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
-                    ..create();
-                },
-              ),
+                    child: const Text('Start Scan QR Code/ BarCode'),
+                  ),
+                const SizedBox(height: 16),
+                Text(
+                  'Text from Native: ${controller.resultReading}',
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
           )
-          // const SizedBox(height: 16),
-          // Text(
-          //   'Text from Native: ${controller.resultReading}',
-          //   style: const TextStyle(fontSize: 16),
-          // ),
 
           // Add some space between the button and the text
           ),
