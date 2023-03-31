@@ -11,21 +11,23 @@ class PlatFormViewScanController extends BaseController {
   String resultReading = "";
 
   final environmentActivity = EnvironmentActivity();
-
+  static const String viewType = 'ScanView';
+  // Pass parameters to the platform side.
+  static const Map<String, dynamic> creationParams = <String, dynamic>{};
   @override
   void onInit() {
     // TODO: implement onInit
     super.onInit();
     //receive by Method Channel
-    environmentActivity.getMethodChannel().setMethodCallHandler((call) {
-      if (call.method == EnvironmentActivity.resultMethod) {
-        print("$TAG ${call.arguments}");
-        String result = call.arguments[EnvironmentActivity.argumentName];
-        resultReading = result;
-        update();
-      }
-      return Future.value(null);
-    });
+    // environmentActivity.getMethodChannel().setMethodCallHandler((call) {
+    //   if (call.method == EnvironmentActivity.resultMethod) {
+    //     print("$TAG ${call.arguments}");
+    //     String result = call.arguments[EnvironmentActivity.argumentName];
+    //     resultReading = result;
+    //     update();
+    //   }
+    //   return Future.value(null);
+    // });
 
   }
 

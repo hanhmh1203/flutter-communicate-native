@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf28671-56bd-4b7a-8b6b-a536add36dd0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/view/ScanView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/view/ScanViewFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/scan_code/scan_screen_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/scan_code/scan_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/scan/ScanActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/scan/ScanActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_scan_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_scan_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/flatform_view/platform_view_scan_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/william/.android/avd/Pixel_6_Pro_API_33.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[8ADX0R8Z4]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -39,9 +54,18 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "/Users/william/Documents/my_git/flutter-communicate-native/android/app/src/main/res/layout",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="william.code.flutter_structure_app.view" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="android.app.main" />
