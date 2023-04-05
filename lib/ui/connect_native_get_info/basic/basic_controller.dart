@@ -6,14 +6,19 @@ import '../environment/environment_sensors.dart';
 
 class BasicController extends BaseController {
   final String TAG = "BasicController";
-  bool pressureAvailable = false;
   String deviceInfo = "";
-  static const MethodChannel _methodChannel = MethodChannel('basic_page');
+  final MethodChannel _methodChannel = const MethodChannel('basic_page');
   int argument = 0;
 
   void getInfo() async {
     deviceInfo = await _methodChannel.invokeMethod("getDeviceInfo", argument);
+    print("$TAG deviceInfo: $deviceInfo");
     argument++;
     update();
+  }
+  @override
+  void onClose() {
+    // TODO: implement onClose
+    super.onClose();
   }
 }
