@@ -41,7 +41,7 @@ class LocationService : Service() {
         private val broadcastManager: LocalBroadcastManager
     ) : android.location.LocationListener {
         override fun onLocationChanged(location: Location) {
-            Log.i("hanhmh1203", "onLocationChanged $location ")
+            Log.i("LocationService", "onLocationChanged $location ")
             val intent = Intent("LOCATION_UPDATE").apply {
                 action = "LOCATION_UPDATE"
                 putExtra("latitude", location.latitude)
@@ -137,7 +137,6 @@ class LocationService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i("hanhmh1203", "onDestroy ")
         if (mLocationManager != null) {
             for (listener in mLocationListeners) {
                 try {
