@@ -8,9 +8,12 @@ import android.content.IntentFilter
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.os.Build
+import android.view.View
+import androidx.camera.view.PreviewView
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
@@ -19,6 +22,8 @@ import william.code.flutter_structure_app.scan.ConstantEnvironmentActivity
 import william.code.flutter_structure_app.scan.ScanActivity
 import william.code.flutter_structure_app.service.EnvironmentChannelServiceLocation
 import william.code.flutter_structure_app.service.LocationService
+import william.code.flutter_structure_app.view.ScanViewFactory
+
 
 class MainActivity : FlutterActivity(), EventChannel.StreamHandler {
     private val REQUEST_CODE_SCAN_ACTIVITY = 1
@@ -36,8 +41,26 @@ class MainActivity : FlutterActivity(), EventChannel.StreamHandler {
     private lateinit var environmentChannelServiceLocation: EnvironmentChannelServiceLocation
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        regisPlatformView(flutterEngine)
         environmentChannelServiceLocation = EnvironmentChannelServiceLocation(flutterEngine)
         setupChannel(flutterEngine.dartExecutor.binaryMessenger)
+    }
+
+    private fun regisPlatformView(flutterEngine: FlutterEngine) {
+        FlutterEngineCache.getInstance().put("my_engine_id", flutterEngine);
+        val cameraView: View = this.layoutInflater.inflate(R.layout.activity_scan_2, null)
+        val previewView: PreviewView = cameraView.findViewById(R.id.viewFinder)
+        flutterEngine
+            .platformViewsController
+            .registry
+            .registerViewFactory(
+                "ScanView",
+                ScanViewFactory(cameraView, previewView, this)
+            )
+//        flutterEngine
+//            .platformViewsController
+//            .registry
+//            .registerViewFactory("ScanView", ScanViewFactory())
     }
 
     private fun setupChannel(messenger: BinaryMessenger) {
@@ -45,11 +68,11 @@ class MainActivity : FlutterActivity(), EventChannel.StreamHandler {
         basicMethodChannel = MethodChannel(messenger, "basic_page")
         basicMethodChannel?.let {
             it.setMethodCallHandler { methodCall: MethodCall, result: MethodChannel.Result ->
-                if(methodCall.method =="getDeviceInfo"){
+                if (methodCall.method == "getDeviceInfo") {
                     val argument = methodCall.arguments
                     val version = Build.VERSION.RELEASE
                     result.success("$version\n argument: $argument")
-                }else{
+                } else {
                     result.notImplemented()
                 }
             }

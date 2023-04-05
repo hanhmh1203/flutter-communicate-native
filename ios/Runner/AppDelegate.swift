@@ -2,8 +2,17 @@ import UIKit
 import Flutter
 import CoreMotion
 
+
 @UIApplicationMain
-@objc class AppDelegate: FlutterAppDelegate {
+@objc class AppDelegate: FlutterAppDelegate, ScanViewControllerDelegate {
+    func didScanBarcode(_ barcodeValue: String) {
+          print("Scanned barcode: \(barcodeValue)")
+        // map type
+        var resultData = [String: Any]()
+        resultData["argumentName_my_result"] = barcodeValue
+        methodChannelScan?.invokeMethod("result_method", arguments: resultData)
+      }
+    var methodChannelScan : FlutterMethodChannel?
     
   override func application(
     _ application: UIApplication,
@@ -52,15 +61,16 @@ import CoreMotion
       let pressureEventChannel = FlutterEventChannel(name: pressureChannelName, binaryMessenger: controller.binaryMessenger)
       pressureEventChannel.setStreamHandler(pressureStream)
       
-      let methodChannelScan = FlutterMethodChannel(name: methodChannelNameScan, binaryMessenger: controller.binaryMessenger)
+      methodChannelScan = FlutterMethodChannel(name: methodChannelNameScan, binaryMessenger: controller.binaryMessenger)
       
-      methodChannelScan.setMethodCallHandler({
+      methodChannelScan?.setMethodCallHandler({
           (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
           switch call.method {
           case "open_new_activity":
                  // Create a new view controller and present it
                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                 let viewController = storyboard.instantiateViewController(withIdentifier: "ScanViewController")
+                 let viewController = storyboard.instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
+                 viewController.delegate = self
                  controller.present(viewController, animated: true, completion: nil)
                  result(true) // Return nil to indicate success
           default:
@@ -68,7 +78,7 @@ import CoreMotion
           }
       })
       
-    GeneratedPluginRegistrant.register(with: self)
+      GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
     

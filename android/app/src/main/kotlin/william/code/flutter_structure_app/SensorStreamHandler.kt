@@ -16,6 +16,10 @@ class SensorStreamHandler(
 ) : EventChannel.StreamHandler, SensorEventListener2 {
     private val sensor = sensorManager.getDefaultSensor(sensorType)
     private var eventSink: EventChannel.EventSink? =null
+    override fun onSensorChanged(event: SensorEvent?) {
+        val sensorValue = event!!.values[0]
+        eventSink?.success(sensorValue)
+    }
     override fun onListen(arguments: Any?, events: EventChannel.EventSink?) {
         if(sensor!=null){
             eventSink = events
@@ -26,11 +30,6 @@ class SensorStreamHandler(
     override fun onCancel(arguments: Any?) {
         sensorManager.unregisterListener(this)
         eventSink = null
-    }
-
-    override fun onSensorChanged(event: SensorEvent?) {
-        val sensorValue = event!!.values[0]
-        eventSink?.success(sensorValue)
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {

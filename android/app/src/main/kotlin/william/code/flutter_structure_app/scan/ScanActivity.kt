@@ -53,10 +53,8 @@ class ScanActivity : AppCompatActivity() {
                 }
             }.toTypedArray()
     }
-    //    private var btnStartService: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scan_2)
         viewBinding = ActivityScan2Binding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 

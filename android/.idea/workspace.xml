@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bf28671-56bd-4b7a-8b6b-a536add36dd0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/basic/basic_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/basic/basic_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/flutter-communicate-native.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="5334e520-0f17-41f0-87cb-98d9d973c354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/SensorStreamHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/william/code/flutter_structure_app/SensorStreamHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/basic/basic_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/basic/basic_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/sensor/sensor_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/connect_native_get_info/sensor/sensor_controller.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +28,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2NbEcgxft3F572XIZnHjWSvI8C3" />
+  <component name="ProjectId" id="2O0wkTUJ8acDInl85uv441pLLiX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -112,11 +105,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0bf28671-56bd-4b7a-8b6b-a536add36dd0" name="Changes" comment="" />
-      <created>1679924463142</created>
+      <changelist id="5334e520-0f17-41f0-87cb-98d9d973c354" name="Changes" comment="" />
+      <created>1680710949479</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679924463142</updated>
+      <updated>1680710949479</updated>
     </task>
     <servers />
   </component>

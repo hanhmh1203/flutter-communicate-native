@@ -28,13 +28,11 @@ class ScanScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                child: ElevatedButton(
-                  onPressed: () async {
-                    controller.startReading();
-                  },
-                  child: const Text('Start Scan QR Code/ BarCode'),
-                ),
+              ElevatedButton(
+                onPressed: () async {
+                  controller.startReading();
+                },
+                child: const Text('Start Scan QR Code/ BarCode'),
               ),
               const SizedBox(height: 16),
               Text(
